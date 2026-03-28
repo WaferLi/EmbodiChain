@@ -40,9 +40,38 @@ After pulling the Docker image, you can run a container with the provided [scrip
 ---
 
 
-### Install EmbodiChain
+### Set Up a Virtual Environment
 
-> **We strongly recommend using a virtual environment to avoid dependency conflicts.**
+We strongly recommend using a virtual environment to avoid dependency conflicts. We recommend [uv](https://docs.astral.sh/uv/), a fast Python package manager, but conda also works.
+
+**Option A: Using `uv` (Recommended)**
+
+Install `uv`:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Create a virtual environment with Python 3.10 or 3.11:
+
+```bash
+uv venv --python 3.11
+```
+
+Activate the virtual environment:
+
+```bash
+source .venv/bin/activate
+```
+
+**Option B: Using `conda`**
+
+```bash
+conda create -n embodichain python=3.11
+conda activate embodichain
+```
+
+### Install EmbodiChain
 
 To install EmbodiChain from pypi, run:
 
